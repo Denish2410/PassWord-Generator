@@ -29,7 +29,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(231deg,rgb(40, 11, 73) 0%,rgba(52,28,79,1) 50%,rgba(88,7,125,1) 100%);
+    background: linear-gradient(231deg,rgb(83, 40, 132) 0%,rgb(59, 27, 96) 50%,rgba(88,7,125,1) 100%);
 }
 .container{
     width: 90%;
@@ -42,13 +42,14 @@ h1{
     text-transform: uppercase;
     text-align: center;
     line-height: 1.2;
-    font-weight: 600;
+    letter-spacing: 1.2px;
+    font-weight: 700;
 }
 .display-container{
     position: relative;
     background-color: var(--dk-violet);
     border-radius: 1rem;
-    border-bottom: 0.35rem solid var(--lt-violet2);
+    border-bottom: 0.35rem solid hsl(281, 61%, 46%);
     margin: 1rem 0;
     padding-top: 0.35rem;
 }
@@ -87,6 +88,10 @@ h1{
     background-color: transparent;
     border: none;
     outline: none;
+    cursor: pointer;
+}
+.copyBtn:active{
+    cursor: default;
 }
 .tooltip{
     position: absolute;
@@ -111,7 +116,7 @@ h1{
     background-color: var(--dk-violet);
     border-radius: 1rem;
     padding: 2rem;
-    border-bottom: 0.35rem solid var(--lt-violet2);
+    border-bottom: 0.35rem solid hsl(281, 61%, 46%);
 }
 .length-container{
     display: flex;
@@ -154,7 +159,7 @@ h1{
     transition: all 100ms ease-in;
 }
 .slider:focus{
-    outline: 1.5px solid var(--vb-yellow);
+    outline: 1px solid var(--vb-yellow);
 }
 .slider::-webkit-slider-thumb:hover{
     background-color: var(--dk-violet);
@@ -195,6 +200,9 @@ h1{
     font-size: 1.25rem;
     letter-spacing: 0.75px;
 }
+.check label:hover{
+    cursor: pointer;
+}
 .strength-container{
     display: flex;
     justify-content: space-between;
@@ -203,12 +211,13 @@ h1{
     margin-bottom: 2rem;
 }
 .strength-container p{
+    letter-spacing: 1.5px;
     color: var(--pl-white);
     font-size: 1.5rem;
 }
 .strength-container .indicator{
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
 }
 .generateButton{
@@ -223,11 +232,15 @@ h1{
     letter-spacing: 1px;
     color: var(--vb-yellow);
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 .generateButton:hover{
     cursor: pointer;
+    background-color: hsl(285, 78%, 42%);
+    border-bottom: 0.35rem solid hsl(52, 61%, 47%);
 }
 .generateButton:active{
     cursor: default;
+    background-color: hsl(285, 73%, 25%);
+    border-bottom: 0.35rem solid hsl(52, 63%, 24%); 
 }

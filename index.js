@@ -18,14 +18,18 @@ const symbols='~`!@#$%^&*()_-+={[}]|:;"<,>.?/';
 let password="";
 let passwordLength=10;
 let checkCount=0;
-handleSlider(); 
+handleSlider();
+setIndicator("#ccc")
 function handleSlider(){
     inputSlider.value=passwordLength;
-    lengthDisplay.innerHTML=passwordLength; 
+    lengthDisplay.innerHTML=passwordLength;
+    const min=inputSlider.min;
+    const max=inputSlider.max;
+    inputSlider.style.backgroundSize=((passwordLength-min)*100/(max-min))+"% 100%";
 }
 function setIndicator(color){
     indicator.style.backgroundColor=color;
-    //shadow
+    indicator.style.boxShadow=`0 0 12px 12px ${color}`;
 }
 function getRndIntger(min,max){
     return Math.floor((Math.random()*(max-min))) +min;
